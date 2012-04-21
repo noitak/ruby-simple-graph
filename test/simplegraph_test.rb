@@ -90,7 +90,7 @@ class SimpleGraphTest < Test::Unit::TestCase
     graph.add 'c', 'a', 'b'
     graph.add 'a', 'B', 'c'
 
-    assert_equal [['a', 'b', 'c'], ['a', 'B', 'c']], graph.triples('a', nil, nil)
+    assert_equal [['a', 'b', 'c'], ['a', 'B', 'c']].sort, graph.triples('a', nil, nil).sort
   end
 
   # 5
@@ -101,7 +101,7 @@ class SimpleGraphTest < Test::Unit::TestCase
     graph.add 'c', 'a', 'b'
     graph.add 'A', 'b', 'c'
 
-    assert_equal [['a', 'b', 'c'], ['A', 'b', 'c']], graph.triples(nil, 'b', 'c')
+    assert_equal [['a', 'b', 'c'], ['A', 'b', 'c']].sort, graph.triples(nil, 'b', 'c').sort
   end
 
   # 6
@@ -112,7 +112,7 @@ class SimpleGraphTest < Test::Unit::TestCase
     graph.add 'c', 'a', 'b'
     graph.add 'A', 'b', 'C'
 
-    assert_equal [['a', 'b', 'c'], ['A', 'b', 'C']], graph.triples(nil, 'b', nil)
+    assert_equal [['a', 'b', 'c'], ['A', 'b', 'C']].sort, graph.triples(nil, 'b', nil).sort
   end
 
   # 7
@@ -123,7 +123,7 @@ class SimpleGraphTest < Test::Unit::TestCase
     graph.add 'c', 'a', 'b'
     graph.add 'A', 'B', 'c'
 
-    assert_equal [['a', 'b', 'c'], ['A', 'B', 'c']], graph.triples(nil, nil, 'c')
+    assert_equal [['a', 'b', 'c'], ['A', 'B', 'c']].sort, graph.triples(nil, nil, 'c').sort
   end
 
   # 8
@@ -134,7 +134,7 @@ class SimpleGraphTest < Test::Unit::TestCase
     graph.add 'c', 'a', 'b'
     graph.add 'A', 'B', 'C'
 
-    assert_equal [['a', 'b', 'c'], ['b', 'c', 'a'], ['c', 'a', 'b'], ['A', 'B', 'C']], graph.triples(nil, nil, nil)
+    assert_equal [['a', 'b', 'c'], ['b', 'c', 'a'], ['c', 'a', 'b'], ['A', 'B', 'C']].sort, graph.triples(nil, nil, nil).sort
   end
 
   def test_must_be_nil_if_not_existing_item
