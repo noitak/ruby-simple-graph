@@ -22,5 +22,5 @@ Ruby implimentation of 'Programming the Semantic Web' Chapter2
 * Implement Chapter3 and more
 
 ## Reference
-* ['Programming the Semantic Web' by By Toby Segaran, Colin Evans, Jamie Taylor](http://shop.oreilly.com/product/9780596153823.do)
+* ['Programming the Semantic Web' by Toby Segaran, Colin Evans, Jamie Taylor](http://shop.oreilly.com/product/9780596153823.do)
 * [SEMANTIC PROGRAMMING](http://semprog.com)
